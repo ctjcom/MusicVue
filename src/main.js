@@ -13,7 +13,7 @@ import axios from 'axios'
 axios.defaults.baseURL='http://127.0.0.1:3000';
 //设置请求头
 axios.defaults.headers.post['Content-Type']='application/x-www-form-urlencoded';
-Vue.proptotype.axios=axios;
+Vue.prototype.axios=axios;
 
 //引入mint-ui
 import Mintui from 'mint-ui'
