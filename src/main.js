@@ -10,7 +10,7 @@ import './assets/css/base.css'
 //引入axios
 import axios from 'axios'
 //设置请求的基本路径
-axios.defaults.baseURL='http://127.0.0.1:3000';
+axios.defaults.baseURL='http://localhost:3000';
 //设置请求头
 axios.defaults.headers.post['Content-Type']='application/x-www-form-urlencoded';
 Vue.prototype.axios=axios;
@@ -22,6 +22,13 @@ Vue.use(Mintui)
 
 //引入字体图标
 import './assets/font/iconfont'
+//引入时间格式化组件
+import moment from 'moment'
+//定义全局的时间过滤器
+Vue.filter('timeformat', function(dataStr, pattern = 'HH:mm:ss') {
+  return moment(dataStr).format(pattern)
+
+})
 
 Vue.config.productionTip = false
 

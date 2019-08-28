@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    
+    <router-link to="">跳转</router-link>
   </div>
 </template>
 
@@ -10,6 +10,19 @@
 
 export default {
   name: 'home',
+  data(){
+    return{
+
+    }
+  },
+  methods:{
+    to(){
+      //this.$router.push({path:"/play",params:{id:1}})
+      //this.$router.push({name:"play",params:{id:1}})
+      //this.$router.push({path:"/play",query:{id:1}})
+      //this.$router.push({name:"play",query:{id:1}})
+    }
+  },
   components: {
     
   }
