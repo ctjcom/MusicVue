@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <router-link to="">跳转</router-link>
+    <router-link to="/play/33894312">跳转</router-link>
+    
   </div>
 </template>
 
