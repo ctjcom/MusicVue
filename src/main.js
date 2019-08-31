@@ -25,7 +25,7 @@ import './assets/font/iconfont'
 //引入时间格式化组件
 import moment from 'moment'
 //定义全局的时间过滤器
-Vue.filter('timeformat', function(dataStr, pattern = 'HH:mm:ss') {
+Vue.filter('timeformat', function(dataStr, pattern = 'mm:ss') {
   return moment(dataStr).format(pattern)
 
 })
