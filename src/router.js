@@ -10,7 +10,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Play
+      component: Home
     },
     {
       path: '/play/:id',

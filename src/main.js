@@ -15,13 +15,11 @@ axios.defaults.baseURL='http://localhost:3000';
 axios.defaults.headers.post['Content-Type']='application/x-www-form-urlencoded';
 Vue.prototype.axios=axios;
 
-//引入mint-ui
-import Mintui from 'mint-ui'
-import 'mint-ui/lib/style.css'
-Vue.use(Mintui)
+//引入vant
+import {Icon} from 'vant';
+import 'vant/lib/icon/local.css';
+Vue.use(Icon);
 
-//引入字体图标
-import './assets/font/iconfont'
 //引入时间格式化组件
 import moment from 'moment'
 //定义全局的时间过滤器

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import playMode from './utils/playMode'
 
 Vue.use(Vuex)
 
@@ -11,7 +12,7 @@ export default new Vuex.Store({
       duration: 0, // audio总时长
       currentTime: 0 // audio当前秒数
   },
-  playMode: "", // 播放模式
+  playMode: playMode.default.value, // 播放模式
   playList: [] // 播放列表
   },
   mutations: {
@@ -27,6 +28,12 @@ export default new Vuex.Store({
     setCurrentTime(state,val){
       state.audio.currentTime=val;
     },
+  },
+  getters:{
+    getAudioProgress(state){
+      //获取播放进度
+      return parseInt(state.audio.currentTime / state.audio.duration * 100)
+    }
   },
   actions: {
 
