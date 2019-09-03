@@ -16,9 +16,14 @@ axios.defaults.headers.post['Content-Type']='application/x-www-form-urlencoded';
 Vue.prototype.axios=axios;
 
 //引入vant
-import {Icon} from 'vant';
+import {Icon,Lazyload} from 'vant';
 import 'vant/lib/icon/local.css';
 Vue.use(Icon);
+Vue.use(Lazyload,{
+  preload:1.3,
+  loading:"/img/loading.gif",
+  attempt: 1
+});
 
 //引入时间格式化组件
 import moment from 'moment'
